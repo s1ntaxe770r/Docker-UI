@@ -1,17 +1,16 @@
-from flask import Flask 
+from flask import Flask ,render_template
+from Api.api import api_route
 import docker
 
 
-
 app =  Flask(__name__)
+app.register_blueprint(api_route,url_prefix='/api')
+
 
 @app.route("/")
 def index():
-    return "hi"
 
-if __name__ == "__main__":
-    app.run(debug=True)
-
+	return "WIP"
 
 
 
