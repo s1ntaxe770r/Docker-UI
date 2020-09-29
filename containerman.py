@@ -4,16 +4,16 @@ client = docker.from_env()
 
 
 class ContainerMan:
-
-	@classmethod
-    def GetRunning():
-        """retruns a list of all running containers. Return Type: list """
+    @staticmethod
+    def GetRunning(self):
         running = client.containers.list()
         return running
 
-    @classmethod
+    @staticmethod
     def DockerInfo():
-        """ Generic Docker Info. Retrun Type: Dict """
+        """
+        Generic Docker Info. Retrun Type: Dict
+        """
         parsed_info = {}
         information = client.info()
         running_containers = information["ContainersRunning"]
@@ -23,7 +23,4 @@ class ContainerMan:
         parsed_info["stopped_containers"] = stopped_containers
         parsed_info["total_images"] = total_images
 
-        return parsed_info	
-
-
-
+        return parsed_info
