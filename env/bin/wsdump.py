@@ -1,4 +1,4 @@
-#!/home/e770r/pyprojects/Docker-UI/env/bin/python
+#!/home/jubril/pyprojects/Docker-UI/env/bin/python
 
 import argparse
 import code
