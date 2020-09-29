@@ -2,11 +2,18 @@
 
 from flask import Blueprint
 from flask.json import jsonify
+from containerman import ContainerMan as cm
 
-api_route = Blueprint("api_route", __name__)
+api = Blueprint("api", __name__)
+
+# @api.route("/containers", methods=["GET"])
+# def index():
 
 
-@api_route.route("/containers", methods=["GET"])
-def index():
-    test = {"fake": "json"}
-    return jsonify(test)
+@api.route("/containers/running", methods=["GET"])
+def running():
+    containers = cm.DockerInfo()
+    running_containers = containers["running_containers"]
+
+    json = {"containers": running_containers}
+    return jsonify(json)
