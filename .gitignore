@@ -5,8 +5,9 @@ env/
 venv/
 ENV/
 env.bak/
+env/
 venv.bak/
-
+env
 
 # Flask stuff:
 instance/
@@ -14,6 +15,7 @@ instance/
 
 
 # Byte-compiled / optimized / DLL files
+Api/__pycache_/
 __pycache__/
 *.py[cod]
 *$py.class
