@@ -8,7 +8,9 @@ env.bak/
 env/
 venv.bak/
 env
-
+Api/__pycache__/*
+Api/__pycache__/
+__pycache__/
 # Flask stuff:
 instance/
 .webassets-cache
