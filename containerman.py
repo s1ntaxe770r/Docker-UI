@@ -5,7 +5,7 @@ client = docker.from_env()
 
 class ContainerMan:
     @staticmethod
-    def GetRunning(self):
+    def GetRunning():
         running = client.containers.list()
         return running
 
@@ -24,3 +24,8 @@ class ContainerMan:
         parsed_info["total_images"] = total_images
 
         return parsed_info
+
+    @staticmethod
+    def AllContainers():
+        all = client.containers.list(all=True)
+        return len(all)
