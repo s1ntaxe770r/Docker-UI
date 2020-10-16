@@ -10,10 +10,14 @@ api = Blueprint("api", __name__)
 # def index():
 
 
-@api.route("/containers/running", methods=["GET"])
-def running():
-    containers = cm.DockerInfo()
-    running_containers = containers["running_containers"]
 
-    json = {"containers": running_containers}
+@api.route("/containers/running",methods=["GET"])
+def running():
+    containers  =  cm.DockerInfo()
+    running_containers = containers['running_containers']
+    json = {"containers":running_containers}
     return jsonify(json)
+
+    
+    
+    
