@@ -1,4 +1,4 @@
-# Environments
+
 .env
 .venv
 env/
@@ -11,12 +11,9 @@ env
 Api/__pycache__/*
 Api/__pycache__/
 __pycache__/
-# Flask stuff:
 instance/
 .webassets-cache
 
-
-# Byte-compiled / optimized / DLL files
 Api/__pycache_/
 __pycache__/
 *.py[cod]
