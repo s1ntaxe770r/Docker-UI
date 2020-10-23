@@ -1,6 +1,6 @@
 # Routes return pure json
 
-from flask import Blueprint
+from flask import Blueprint,request
 from flask.json import jsonify
 from containerman import ContainerMan as cm
 
@@ -25,6 +25,9 @@ def all():
 	json  = {"all_containers":all_containers}
 	return json
 
-    
+
+# @api.route("images/pull",methods=["POST"])
+# def pull():
+#     ImageName =  request.data["image"]
     
     
