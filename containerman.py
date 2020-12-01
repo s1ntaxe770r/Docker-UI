@@ -30,11 +30,11 @@ class ContainerMan:
         all = client.containers.list(all=True)
         return len(all)
 
-    # @staticmethod
-    # def Pull(image, tag=None):
-    #     try:
-    #         pulledimage = client.images.pull(image)
-    #         return
-    #     except docker.errors.APIError as e:
-    #         raise(e)
-    #         return
+    @staticmethod
+    def Pull(image:str, tag=None):
+        try:
+            pulledimage = client.images.pull(image)
+            return
+        except docker.errors.APIError as e:
+            raise(e)
+            return
