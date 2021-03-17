@@ -37,4 +37,4 @@ class ContainerMan:
             return
         except docker.errors.APIError as e:
             raise(e)
-            return
+          
