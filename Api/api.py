@@ -15,15 +15,15 @@ api = Blueprint("api", __name__)
 def running():
     containers  =  cm.DockerInfo()
     running_containers = containers['running_containers']
-    json = {"containers":running_containers}
-    return jsonify(json)
+    jsonresp = {"containers":running_containers}
+    return jsonify(jsonresp)
 
 
 @api.route("/containers/all", methods=["GET"])
 def all():
 	all_containers = cm.AllContainers()
-	json  = {"all_containers":all_containers}
-	return json
+	jsonresp  = {"all_containers":all_containers}
+	return jsonify(jsonresp)
 
 
 # @api.route("images/pull",methods=["POST"])
